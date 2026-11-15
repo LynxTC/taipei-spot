@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>大臺北地方手札 — 自然步道・歷史古蹟・街區巷弄導覽</title>
+  <meta name="description" content="收錄臺北市與新北市具代表性的自然步道、歷史古蹟、文化園區與在地生活街邊，帶你放慢腳步漫遊雙北。">
+  
+  <!-- 全站樣式表（相對路徑） -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+  <!-- 頁首區塊 -->
+  <header class="site-header">
+    <div class="container">
+      <span class="site-badge">TAIPEI &amp; NEW TAIPEI SPOTS</span>
+      <h1 class="site-title">大臺北地方手札</h1>
+      <p class="site-subtitle">收錄雙北自然步道、歷史古蹟與在地巷弄生活日常</p>
+    </div>
+  </header>
+
+  <!-- 主內容區 -->
+  <main class="container">
+
+    <!-- 今日推薦區塊（Daily Pick） -->
+    <section id="dailyPickSection" class="daily-section" aria-label="今日推薦景點">
+      <!-- 由 assets/js/main.js 動態生成渲染 -->
+    </section>
+
+    <!-- 雙重篩選列（無搜尋框） -->
+    <section class="filter-section" aria-label="景點篩選器">
+      <!-- 縣市篩選 -->
+      <div class="filter-group">
+        <span class="filter-label">
+          <span>📍</span> 縣市區域
+        </span>
+        <div class="filter-pills" id="cityFilterPills">
+          <button type="button" class="filter-btn active" data-filter="city" data-value="all">全部縣市</button>
+          <button type="button" class="filter-btn" data-filter="city" data-value="臺北市">臺北市</button>
+          <button type="button" class="filter-btn" data-filter="city" data-value="新北市">新北市</button>
+        </div>
+      </div>
+
+      <!-- 景點類型篩選 -->
+      <div class="filter-group">
+        <span class="filter-label">
+          <span>🏷️</span> 景點類型
+        </span>
+        <div class="filter-pills" id="categoryFilterPills">
+          <button type="button" class="filter-btn active" data-filter="category" data-value="all">全部類型</button>
+          <button type="button" class="filter-btn" data-filter="category" data-value="街區巷弄">街區巷弄</button>
+          <button type="button" class="filter-btn" data-filter="category" data-value="自然步道">自然步道</button>
+          <button type="button" class="filter-btn" data-filter="category" data-value="歷史古蹟">歷史古蹟</button>
+          <button type="button" class="filter-btn" data-filter="category" data-value="文化園區">文化園區</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 篩選統計與卡片網格標題 -->
+    <div class="spots-count-bar">
+      <span>探索雙北地方角落</span>
+      <span>共 <span id="spotsCount" class="count-highlight">0</span> 處景點</span>
+    </div>
+
+    <!-- 首頁景點卡片網格 -->
+    <section id="spotsGrid" class="spots-grid" aria-label="景點卡片列表">
+      <!-- 由 assets/js/main.js 動態生成渲染精簡卡片 -->
+    </section>
+
+  </main>
+
+  <!-- 詳情彈出視窗（Modal） -->
+  <div id="spotModal" class="modal-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-container">
+      <button type="button" class="modal-close-btn" id="modalCloseBtn" aria-label="關閉詳情視窗">&times;</button>
+      <div id="modalContent">
+        <!-- 由 assets/js/main.js 填入詳情資料 -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 頁尾區塊 -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>大臺北地方手札 · Taipei Spot Notes</p>
+      <p>放慢腳步，在城市的褶皺裡找到生活痕跡</p>
+    </div>
+  </footer>
+
+  <!-- 主要邏輯腳本（相對路徑） -->
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>
